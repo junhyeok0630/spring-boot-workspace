@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <form th:action="@{/security-check}" method="post">
+            <div>
+                <label for="username">아이디:</label>
+                <input type="text" id="username" name="username" required autofocus />
+            </div>
+            <div>
+                <label for="password">비밀번호:</label>
+                <input type="text" id="password" name="password" required />
+            </div>
+            <div>
+                <input type="submit" value="로그인" />
+            </div>
+            <div th:if="${login_failure}">
+                <p th:text="${error_message}"></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

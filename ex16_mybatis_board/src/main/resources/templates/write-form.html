@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write New Post</title>
+</head>
+<body>
+    <h1>Write New Post</h1>
+    <table border="1" width="500" cellpadding="0" cellspacing="0">
+        <form action="/write" method="post">
+            <tr>
+                <th>작성자</th>
+                <td>
+                    <input type="text" id="writer" name="writer" />
+                </td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td>
+                    <input type="text" id="title" name="title" />
+                </td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td>
+                    <textarea type="text" id="content" name="content"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="입력" >
+                    <a href="/list">목록보기</a>
+                </td>
+            </tr>
+        </form>     
+    </table>
+</body>
+</html>

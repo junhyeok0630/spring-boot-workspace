@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ex22_transaction_manager.dao.Transaction2DAO">
+    
+    <insert id="pay">insert into transaction2 (consumerId, amount) values (#{param1}, #{param2})</insert>
+
+</mapper>

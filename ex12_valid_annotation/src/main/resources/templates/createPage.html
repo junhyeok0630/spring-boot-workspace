@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatePage</title>
+</head>
+<body>
+    <h1>CreatePage.html</h1>
+    <form th:action="@{/create}" th:object="${dto}" method="post">
+        <div>
+            <label for="id">번호:</label>
+            <input type="text" id="id" th:field="*{id}" readonly /> 
+        </div>
+        <div>
+            <label for="writer">작성자:</label>
+            <input type="text" id="writer" th:field="*{writer}" /> 
+            <div th:if="${#fields.hasErrors('writer')}" th:errors="*{writer}"></div>
+        </div>
+        <div>
+            <label for="content">내용:</label>
+            <input type="text" id="content" th:field="*{content}" /> 
+            <div th:if="${#fields.hasErrors('content')}" th:errors="*{content}"></div>
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+
+</body>
+</html>

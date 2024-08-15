@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+</head>
+<body>
+    <h1>My View 페이지</h1>
+    <p>이름 : <span th:text="${name}"></span></p>
+    <p>나이 : <span th:text="${age}"></span></p>
+    <p>객체 테스트 : <span th:text="${ObjectTest}"></span></p>
+    <h2>리스트 항목</h2>
+    <ul>
+        <li th:each="item : ${lists}" th:text="${item}"></li>
+    </ul>
+</body>
+</html>

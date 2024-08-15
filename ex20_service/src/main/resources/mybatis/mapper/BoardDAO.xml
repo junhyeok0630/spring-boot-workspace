@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ex20_service.dao.BoardDAO">
+    <select id="listDAO" resultType="com.example.ex20_service.dto.BoardDTO">select * from simple_board order by id desc</select>
+    
+    <!-- 인덱스 사용 -->
+    <select id="viewDAO" resultType="com.example.ex20_service.dto.BoardDTO">select * from simple_board where id = #{0}</select>
+
+    <insert id="writeDAO">insert into simple_board (writer, title, content) values (#{item1},#{item2},#{item3})</insert>
+
+    <!-- @Param 어노테이션 사용 -->
+    <delete id="deleteDAO">delete from simple_board where id = #{_id}</delete>
+
+    <select id="articleCount" resultType="_int"> select count(*) from simple_board</select>
+</mapper>

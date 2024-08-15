@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+</head>
+<body>
+    <h1>View Post</h1>
+    <table border="1" width="500" cellpadding="0" cellspacing="0">
+            <tr>
+                <th>번호</th>
+                <td th:text="${dto.id}"></td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td th:text="${dto.writer}"></td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td th:text="${dto.title}"></td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td th:text="${dto.content}"></td>
+            </tr>
+    </table>
+    <a href="/list">목록보기</a>
+</body>
+</html>

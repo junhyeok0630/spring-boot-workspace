@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateDonePage</title>
+</head>
+<body>
+    <h1>CreateDonePage.html</h1>
+    <div>
+        <p>번호:
+            <span th:text="${dto.id}"></span>
+        </p>
+        <p>작성자:
+            <span th:text="${dto.writer}"></span>
+        </p>
+        <p>내용:
+            <span th:text="${dto.content}"></span>
+        </p>
+    </div>
+
+</body>
+</html>
