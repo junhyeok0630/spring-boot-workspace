@@ -32,11 +32,21 @@ public class BoardService {
 
     //     boardRepository.save(board);
     // }
+    
     public void write(String writer, String title, String content) {
         boardRepository.write(writer, title, content);
     }
 
     public void delete(int id) {
         boardRepository.deleteById(id);
+    }
+
+    public Board update(int id, String writer, String title, String content) {
+        Board board = boardRepository.findById(id).orElseThrow(()-> new RuntimeException("게시글을 찾을 수 없습니다. ID: " + id));
+        board.setWriter(writer);
+        board.setTitle(title);
+        board.setContent(content);
+
+        return boardRepository.save(board);
     }
 }

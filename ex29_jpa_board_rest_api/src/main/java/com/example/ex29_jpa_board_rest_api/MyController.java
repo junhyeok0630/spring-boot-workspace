@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,17 +46,31 @@ public class MyController {
     }
 
     @PostMapping("/write")
-    public ResponseEntity<Board> write(@RequestParam("writer") String writer, 
-            @RequestParam("title") String title, 
-            @RequestParam("content") String content) {
-        boardService.write(writer, title, content);
+    public ResponseEntity<Board> write(@RequestBody Board board) {
+        boardService.write(board.getWriter(), board.getTitle(), board.getContent());
 
-        Board newBoard = new Board();
-        newBoard.setWriter(writer);
-        newBoard.setTitle(title);
-        newBoard.setContent(content);
+        return ResponseEntity.ok(board);
+    }
+    
+    // @PostMapping("/write")
+    // public ResponseEntity<Board> write(@RequestParam("writer") String writer, 
+    //         @RequestParam("title") String title, 
+    //         @RequestParam("content") String content) {
+    //     boardService.write(writer, title, content);
 
-        return ResponseEntity.ok(newBoard);
+    //     Board newBoard = new Board();
+    //     newBoard.setWriter(writer);
+    //     newBoard.setTitle(title);
+    //     newBoard.setContent(content);
+
+    //     return ResponseEntity.ok(newBoard);
+    // }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> delete(@PathVariable int id) {
+        boardService.delete(id);
+
+        return ResponseEntity.noContent().build();
     }
 
     // @DeleteMapping("/delete")
@@ -64,10 +80,14 @@ public class MyController {
     //     return ResponseEntity.noContent().build();
     // }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> delete(@PathVariable int id) {
-        boardService.delete(id);
-
-        return ResponseEntity.noContent().build();
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Board> update(@PathVariable int id, @RequestBody Board updatedBoard) {
+        try{
+            Board board = boardService.update(id, updatedBoard.getWriter(), updatedBoard.getTitle(), updatedBoard.getContent());
+            return ResponseEntity.ok(board);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+        
     }
 }
