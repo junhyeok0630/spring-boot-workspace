@@ -28,10 +28,10 @@ public class WebSecurityConfig {
         .anyRequest().authenticated())
         .formLogin(formLogin -> formLogin
                         .loginPage("/login-form")
-                        .loginProcessingUrl("/security-check")
+                        .loginProcessingUrl("/security-check") // 없을 시 순환 참조 (타임리프 액션이 security check이 아닌 login_form으로 가서 오류 발생) - 스프링 시큐리티에서 제공
                         .defaultSuccessUrl("/member/welcome", true)
                         // .failureUrl("/login-error")
-                        .failureHandler(customAuthenticationFailureHandler)
+                        .failureHandler(customAuthenticationFailureHandler) 
                         .permitAll()
         )
         .logout(logout -> logout
