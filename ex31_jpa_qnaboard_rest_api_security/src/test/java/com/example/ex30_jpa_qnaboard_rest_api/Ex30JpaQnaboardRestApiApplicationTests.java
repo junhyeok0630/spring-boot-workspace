@@ -12,16 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.ex30_jpa_qnaboard_rest_api.answer.Answer;
-import com.example.ex30_jpa_qnaboard_rest_api.answer.AnswerRepository;
-import com.example.ex30_jpa_qnaboard_rest_api.question.Question;
-import com.example.ex30_jpa_qnaboard_rest_api.question.QuestionRepository;
-import com.example.ex30_jpa_qnaboard_rest_api.question.QuestionService;
+import com.example.ex31_jpa_qnaboard_rest_api_security.answer.Answer;
+import com.example.ex31_jpa_qnaboard_rest_api_security.answer.AnswerRepository;
+import com.example.ex31_jpa_qnaboard_rest_api_security.question.Question;
+import com.example.ex31_jpa_qnaboard_rest_api_security.question.QuestionRepository;
+import com.example.ex31_jpa_qnaboard_rest_api_security.question.QuestionService;
 
 // import jakarta.transaction.Transactional;
 
 @SpringBootTest
-class Ex30JpaQnaboardRestApiApplicationTests {
+class Ex31JpaQnaboardRestApiSecurityApplicationTests {
 
 	@Test
 	void contextLoads() {

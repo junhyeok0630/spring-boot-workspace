@@ -1,4 +1,4 @@
-package com.example.ex30_jpa_qnaboard_rest_api.question;
+package com.example.ex31_jpa_qnaboard_rest_api_security.question;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

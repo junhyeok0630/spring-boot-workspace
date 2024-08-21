@@ -1,9 +1,9 @@
-package com.example.ex30_jpa_qnaboard_rest_api.question;
+package com.example.ex31_jpa_qnaboard_rest_api_security.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.example.ex30_jpa_qnaboard_rest_api.answer.Answer;
+import com.example.ex31_jpa_qnaboard_rest_api_security.answer.Answer;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

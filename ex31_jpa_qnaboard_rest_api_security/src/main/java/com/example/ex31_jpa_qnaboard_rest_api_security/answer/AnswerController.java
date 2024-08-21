@@ -1,4 +1,4 @@
-package com.example.ex30_jpa_qnaboard_rest_api.answer;
+package com.example.ex31_jpa_qnaboard_rest_api_security.answer;
 
 import lombok.RequiredArgsConstructor;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.ex30_jpa_qnaboard_rest_api.question.Question;
-import com.example.ex30_jpa_qnaboard_rest_api.question.QuestionService;
+import com.example.ex31_jpa_qnaboard_rest_api_security.question.Question;
+import com.example.ex31_jpa_qnaboard_rest_api_security.question.QuestionService;
 
 import jakarta.validation.Valid;
 

@@ -1,4 +1,4 @@
-package com.example.ex30_jpa_qnaboard_rest_api.answer;
+package com.example.ex31_jpa_qnaboard_rest_api_security.answer;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.example.ex30_jpa_qnaboard_rest_api.question;
+package com.example.ex31_jpa_qnaboard_rest_api_security.question;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.example.ex30_jpa_qnaboard_rest_api.DataNotFoundException;
+import com.example.ex31_jpa_qnaboard_rest_api_security.DataNotFoundException;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,8 +1,8 @@
-package com.example.ex30_jpa_qnaboard_rest_api.answer;
+package com.example.ex31_jpa_qnaboard_rest_api_security.answer;
 
 import java.time.LocalDateTime;
 
-import com.example.ex30_jpa_qnaboard_rest_api.question.Question;
+import com.example.ex31_jpa_qnaboard_rest_api_security.question.Question;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
