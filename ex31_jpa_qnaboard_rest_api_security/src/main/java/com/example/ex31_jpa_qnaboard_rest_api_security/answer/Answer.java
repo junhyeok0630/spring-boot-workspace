@@ -3,6 +3,7 @@ package com.example.ex31_jpa_qnaboard_rest_api_security.answer;
 import java.time.LocalDateTime;
 
 import com.example.ex31_jpa_qnaboard_rest_api_security.question.Question;
+import com.example.ex31_jpa_qnaboard_rest_api_security.user.UserEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -32,4 +33,9 @@ public class Answer {
     @ManyToOne
     @JsonIgnore // 직열화 순환 참조 방지
     private Question question;
+
+    @ManyToOne
+    private UserEntity author;
+
+    private LocalDateTime modifyDate;
 }
